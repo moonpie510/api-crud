@@ -22,8 +22,6 @@ class AddHeaders
 
         $response->headers->set('X-Debug-Memory', $memoryCheck);
         $response->headers->set('X-Debug-Time', ($endCheckingTime - $startCheckingTime) * 1000);
-        $response->headers->set('Accept', 'application/json');
-        $response->headers->set('Content-Type', 'application/json');
 
         return $response;
     }
