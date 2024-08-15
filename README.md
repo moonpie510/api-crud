@@ -44,17 +44,17 @@ docker exec docker_php composer install
 
 #### 5) Генерация ключа (если надо)
 ```shell
-docker compose docker_php php artisan key:generate
+docker exec docker_php php artisan key:generate
 ```
 
 #### 6) Миграция с seed
 ```shell
-docker compose docker_php php atrisan migrate --seed
+docker exec docker_php php atrisan migrate --seed
 ```
 
 #### 7) Запуск сервера
 ```shell
-docker compose docker_php php artisan serve
+docker exec docker_php php artisan serve
 ```
 
 ### Что реализовано
