@@ -20,17 +20,7 @@ git clone git@github.com:moonpie510/api-crud.git
 git clone https://github.com/moonpie510/api-crud.git
 ```
 
-#### 2) Поднятие docker контейнера
-```shell
-docker compose up -d
-```
-
-#### 3) Установка зависимостей
-```shell
-docker compose docker_php composer install
-```
-
-#### 4) Скопировать файл .env и прописать в него свои данные для подключения к базе данных
+#### 2) Скопировать файл .env и прописать в него свои данные для подключения к базе данных
 ```shell
 cp .env.example .env
 
@@ -40,6 +30,16 @@ DB_PORT=3306
 DB_DATABASE=bnovo
 DB_USERNAME=root
 DB_PASSWORD=root
+```
+
+#### 3) Поднятие docker контейнера
+```shell
+docker compose up -d
+```
+
+#### 4) Установка зависимостей
+```shell
+docker exec docker_php composer install
 ```
 
 #### 5) Генерация ключа (если надо)
