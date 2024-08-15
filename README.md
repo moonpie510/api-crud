@@ -22,7 +22,7 @@ git clone https://github.com/moonpie510/api-crud.git
 
 #### 2) Поднятие docker контейнера
 ```shell
-docker compose up
+docker compose up -d
 ```
 
 #### 3) Установка зависимостей
