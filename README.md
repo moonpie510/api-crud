@@ -32,27 +32,32 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
-#### 3) Поднятие docker контейнера
+#### 3) Разрешить доступ к папкам
+```shell
+sudo chmod 777 -R .
+```
+
+#### 4) Поднятие docker контейнера
 ```shell
 docker compose up -d
 ```
 
-#### 4) Установка зависимостей
+#### 5) Установка зависимостей
 ```shell
 docker exec docker_php composer install
 ```
 
-#### 5) Генерация ключа (если надо)
+#### 6) Генерация ключа (если надо)
 ```shell
 docker exec docker_php php artisan key:generate
 ```
 
-#### 6) Миграция с seed
+#### 7) Миграция с seed
 ```shell
 docker exec docker_php php atrisan migrate --seed
 ```
 
-#### 7) Запуск сервера
+#### 8) Запуск сервера
 ```shell
 docker exec docker_php php artisan serve
 ```
