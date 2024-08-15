@@ -39,6 +39,10 @@ sudo chmod 777 -R .
 
 #### 4) Поднятие docker контейнера и заходим внутрь
 ```shell
+docker compose build
+```
+
+```shell
 docker compose up -d
 ```
 
@@ -58,7 +62,11 @@ php artisan key:generate
 
 #### 7) Миграция с seed
 ```shell
-php atrisan migrate --seed
+php atrisan migrate
+```
+
+```shell
+php atrisan db:seed --class=DatabseSeeder
 ```
 
 #### 8) Запуск сервера
